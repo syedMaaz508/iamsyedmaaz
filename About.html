@@ -4,48 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syed Maaz | About</title>
-    
+    <title>Syed Maaz | About</title> 
     <link rel="stylesheet" href="About.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- for tab icon -->
     <link rel="shortcut icon" href="pic.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Rufina:regular,700" rel="stylesheet" />
 
   </head>
   <body>
 
-    
+    <div id="preLoaderScreen">
+      <div id="preloader">
+          <img src="pic.png" loading="lazy" alt="mypic" />
+      </div>
+
+    </div>
 
       <div class="about-container" >
         
         <div class="navbar">
-
-          <div class="progress">
-            <div class="progress-bar"></div>
-          </div>
 
           <div class="pic">
             <img src="pic.png" loading="lazy" alt="mypic" />
           </div>
 
 
-
           <div class="nav-items">
-            <ul>
+
+            <div id="menuBars">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul id="navli">
               <li><a href="Home.html" >Home</a></li>
               <li><a href="About.html"><span class="currentLink">About</span></a></li>
-            
               <li><a href="Projects.html">Projects</a></li>
               <li><a href="Contact.html">Contact</a></li>
             </ul>
           </div>
+
         </div>
 
 
         <div class="about-content" >
-
-          <!-- <div class="aboutandimagegrid"> -->
-
 
           <div class="mainabout">
             <h1 class="AboutMeHeading">About Me</h1>
@@ -69,29 +71,23 @@
                 Besides my discipline in Astrophysics, I’m an independent Front End Developer with some visual design experience and experience as a data input operator, as well as experience working in some of the largest Freelancing  platforms while completing a couple of related courses as well. 
                 Having a dual background of my studies, I find my interest in pursuing and looking forward to potential career opportunities to utilize my Development skills. <br>
                 Therefore I'd be delighted to discuss internship or employment opportunities in the Development Sphere. <span class="quote"><i class="fa-solid fa-quote-right"></i></span> <br> 
-  
 
                 <br> Among my primary abilities are:  <br><br>
                 <ul class="primaryabilities">
-                  <li>Web Development</li>
-                  <li>React Js Development</li>
+                  <li>Front End Web Development</li> 
                   <li>Data Entry Operator</li>
                   <li>Graphic Designing</li>
                 </ul>
 
-                <br>You can also have a look on some of my Front End Projects in <span class="projLink"><a href="Projects.html"> Project</a></span> Section. 
-                <!-- <br>You can also have a look on some of my Front End Projects in  Project </a> Section.<br>  -->
-                
+                <br>You can also have a look on some of my Front End Projects in <span class="projLink"><a href="Projects.html"> Project</a></span> Section.                 
               </div>
               <div class="aboutMePicture">
-                <div class="img" loading="lazy"></div>
+                <div class="image" loading="lazy"></div>          
               </div>
               
 
             </div>
           </div>
-
-        <!-- </div> -->
 
 
           <hr
@@ -133,22 +129,21 @@
                     <div class="educationList" >
                       <ul>
                         <li>Matriculation</li>
-                          <div class="matric">2016 - Little Folk's School  |  Science</div>
+                          <div class="matric"> 2016 - Little Folk's School <span class="group">|  Science</span></div>
 
                         <li>Intermediate</li>
-                          <div class="inter">2018 - Dj Sindh Government Science College  |  Pre-Engineering</div>
+                          <div class="inter">2018  - Dj Sindh Govt Science College <span class="group">|  Pre-Engineering</span></div>
 
                         <li>Bachelors</li>
-                          <div class="bsc">2021 - University of Karachi  |  Space Science & Technology</div>
+                          <div class="bsc">2021 - University of Karachi <span class="group">|  Space Science & Technology</span></div>
 
                         <li>Masters</li>
-                          <div class="msc">2022 - University of Karachi  |  Satellite Communication</div>
+                          <div class="msc">2022 - University of Karachi <span class="group">|  Satellite Communication</span></div>
 
                       </ul>
                     </div>
               </div>
             
-          <!-- <hr class="educationHr" style="background-image: radial-gradient(circle at bottom center,rgb(87, 196, 178),#15141a);background-color:#57c4b2;height: 2px;width: 50%; border-width:0 ;text-align: center;margin: auto;"> -->
             
               <div class="certification" id="certification" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
                   <h1 class="certificationHeading">Certification</h1>
@@ -229,15 +224,15 @@
                   <h4 class="email">Country :</h4>
                   <h5 class="countryname">Pakistan</h5>
 
-                  <a href="MyResume.pdf" download=""><button class="downloadCV" ><span><i class="fa-solid fa-download"></i></span> Download CV </button></a> 
+                  <a href="MyResume.pdf" download=""><button class="downloadCV" > My Resume <span><i class="fa-solid fa-download "></i></span></button></a> 
                   
                   <div class="socialM">
-                    <a href="https://www.linkedin.com/in/syed-maaz-08b296194/" target="_blank"> <i class="fa-brands fa-linkedin-in fa-xl"></i></i></a>
+                    <a href="https://www.linkedin.com/in/syedmaaz508/" target="_blank"> <i class="fa-brands fa-linkedin-in fa-xl"></i></i></a>
                     <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></i></a>
                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
                   </div>
                   
-
+              
 
               </div>
             </div>
@@ -258,16 +253,18 @@
               />
               
               <div class="skillbars">
-                
-                HTML : <progress value="80" max="100" data-aos="fade-left"></progress> 
-                CSS : <progress value="80" max="100" data-aos="fade-left"></progress> 
-                JavaScript : <progress value="60" max="100" data-aos="fade-left"></progress> 
-                React Js : <progress value="60" max="100" data-aos="fade-left"></progress> 
-                Bootstrap : <progress value="70" max="100" data-aos="fade-left"></progress> 
-                Ms Word : <progress value="100" max="100" data-aos="fade-left"></progress> 
-                Ms Excel : <progress value="90" max="100" data-aos="fade-left"></progress> 
-                Ms Powerpoint : <progress value="100" max="100" data-aos="fade-left"></progress>
-                Photoshop : <progress value="50" max="100" data-aos="fade-left"></progress> 
+
+                HTML <progress value="80" max="100" data-aos="fade-left"></progress> 
+                CSS  <progress value="80" max="100" data-aos="fade-left"></progress> 
+                JavaScript  <progress value="70" max="100" data-aos="fade-left"></progress> 
+                React Js  <progress value="60" max="100" data-aos="fade-left"></progress> 
+                Wordpress  <progress value="80" max="100" data-aos="fade-left"></progress> 
+                Bootstrap  <progress value="70" max="100" data-aos="fade-left"></progress> 
+                Ms Word  <progress value="100" max="100" data-aos="fade-left"></progress> 
+                Ms Excel  <progress value="90" max="100" data-aos="fade-left"></progress> 
+                Ms Powerpoint  <progress value="100" max="100" data-aos="fade-left"></progress>
+                Adobe Photoshop  <progress value="70" max="100" data-aos="fade-left"></progress> 
+              
 
               </div>
             </div>
@@ -293,7 +290,7 @@
                     <li class="list-inline-item"><a href="Projects.html">Projects</a></li>
                     <li class="list-inline-item"><a href="Contact.html">Contact</a></li>
                 </ul>
-                <p class="copyright" translate="no">Syed Muhammad Maaz ul Hasan © 2022</p>
+                <p class="copyright" translate="no">Syed Muhammad Maaz ul Hasan © <span id="Year"></span></p>
             </footer>
         </div>
 
@@ -306,6 +303,15 @@
       </div>
 
 
+<script>
+  const preLoaderScreen=document.getElementById("preLoaderScreen")
+
+  window.addEventListener('load',() => {
+    preLoaderScreen.style.display="none"
+  });
+
+</script>
+
 <script src="https://kit.fontawesome.com/d316829f80.js" crossorigin="anonymous"></script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -314,8 +320,6 @@
 </script>
 
 <script>
-
- 
 
   const totopbtn=document.getElementById("totopbtn") 
   window.onscroll = function() {scrollFunction()};
@@ -336,6 +340,31 @@ scrollToTop = () =>{
 
 </script>
 
+<script>
+  const menuBars=document.getElementById("menuBars")
+  const navli=document.getElementById("navli")
+  
+  const displayNav=()=>{
+      
+      if ( navli.style.display==="none") {
+          navli.style.display="block"
+          
+
+      } else {
+          navli.style.display="none"
+      }
+  }
+
+  menuBars.addEventListener("click", displayNav);
+
+</script>
+
+<script>
+  // Year in footer will automatically change
+  const Year=document.getElementById("Year")
+  Year.innerHTML= new Date().getFullYear()
+
+</script>
 
 
   </body>

@@ -16,23 +16,26 @@
     <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
 </head>
 <body>
+    <div id="preLoaderScreen">
+        <div id="preloader">
+            <img src="pic.png" loading="lazy" alt="mypic" />
+        </div>
+  
+      </div>
 
     <div class="project-container">
 
         <div class="navbar">
-            
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-
             <div class="pic">
                 <img src="pic.png" loading="lazy" alt="mypic" />
             </div>
 
-
-
             <div class="nav-items">
-                <ul>
+                <div id="menuBars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <ul id="navli">
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="About.html">About</a></li>
     
@@ -40,7 +43,6 @@
                     <li><a href="Contact.html">Contact</a></li>
     
                 </ul>
-            
             </div>
         </div>
 
@@ -49,14 +51,14 @@
             <hr
             class="projectheadingHr"
             style="
-              background-color: #57c4b221;
-              height: 1px;
-              width: 60%;
-              border-width: 0;
-              text-align: center;
-              margin: auto;
+                background-color: #57c4b221;
+                height: 1px;
+                width: 60%;
+                border-width: 0;
+                text-align: center;
+                margin: auto;
             "
-          />
+            />
 
             <div class="swipercontainer">
             
@@ -64,138 +66,108 @@
                     <!-- Swiper JS Framework -->
                     <div class="swiper-wrapper">
                     
-                      <div class="swiper-slide">
-
-                        <div class="card cardRight">
-                            <div class="cardimage">
-                                <img src="proj1.png" loading="lazy" alt="proj1">
-                            </div>
-                            <div class="cardmatter">
-                                <h2>Project 1</h2>
-                                <p><span><a href="https://textcookie.netlify.app" target="_blank">TextCookie</a></span> - A Text utility WebApp made using Javascript Framework ReactJs. </p>
-
+                        <div class="swiper-slide">
+                            <div class="card cardRight">
+                                <div class="cardimage">
+                                    <img src="proj1.png" loading="lazy" alt="proj1" onclick="OpenImgModal(this.src)" >
+                                </div>
+                                <div class="cardmatter">
+                                    <h2>Project - 1</h2>
+                                    <p><span><a href="https://textcookie.netlify.app" target="_blank">TextCookie</a></span> - A Text utility WebApp made using Javascript Framework ReactJs. </p>
+                                </div>
                             </div>
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardLeft">
-                            <div class="cardmatter">
-                                <h2>Project 2</h1>
-                                <p>NewsBox - A news WebApp using NewsApi made with Javascript Framework ReactJs </p>
-
+                        <div class="swiper-slide">
+                            <div class="card cardLeft">
+                                <div class="cardmatter">
+                                    <h2>Project - 2</h1>
+                                    <p>NewsBox - A news WebApp using NewsApi made with Javascript Framework ReactJs </p>
+                                </div>
+                                <div class="cardimage">
+                                    <img src="proj2.PNG" loading="lazy" alt="proj2" onclick="OpenImgModal(this.src)" >
+                                </div>
                             </div>
-                            <div class="cardimage">
-                                <img src="proj2.PNG" loading="lazy" alt="proj2">
-                            </div>
-
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardRight">
-                            <div class="cardimage">
-                                <img src="proj3.PNG" loading="lazy" alt="proj3">
+                        <div class="swiper-slide">
+                            <div class="card cardRight">
+                                <div class="cardimage">
+                                    <img src="proj3.PNG" loading="lazy" alt="proj3" onclick="OpenImgModal(this.src)" >
+                                </div>
+                                <div class="cardmatter">
+                                    <h2>Project - 3</h2>
+                                    <p>Burgs - A Basic Landing page for Burger Restraunt made using HTML & CSS  </p>
+                                </div>
                             </div>
-                            <div class="cardmatter">
-                                <h2>Project 3</h2>
-                                <p>Burgs - A Basic Landing page for Burger Restraunt made using HTML & CSS  </p>
-
-                            </div>
-
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardLeft">
-                            <div class="cardmatter">
-                                <h2>Project 4</h1>
-                                <p>Basic Portfolio website template using HTML & CSS</p>
-
+                        <div class="swiper-slide">
+                            <div class="card cardLeft">
+                                <div class="cardmatter">
+                                    <h2>Project - 4</h1>
+                                    <p>Basic Portfolio website template using HTML & CSS</p>
+                                </div>
+                                <div class="cardimage">
+                                    <img src="proj4.PNG" loading="lazy" alt="proj4" onclick="OpenImgModal(this.src)" >
+                                </div>
                             </div>
-                            <div class="cardimage">
-                                <img src="proj4.PNG" loading="lazy" alt="proj4">
-                            </div>
-
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardRight">
-                            <div class="cardimage">
-                                <img src="proj5.PNG" loading="lazy" alt="proj5">
+                        <div class="swiper-slide">
+                            <div class="card cardRight">
+                                <div class="cardimage">
+                                    <img src="proj5.PNG" loading="lazy" alt="proj5" onclick="OpenImgModal(this.src)" >
+                                </div>
+                                <div class="cardmatter">
+                                    <h2>Project - 5</h1>
+                                    <p>Profile card with Sliding Sidebar Menu made using HTML, CSS & Javascript</p>
+                                </div>
                             </div>
-                            <div class="cardmatter">
-                                <h2>Project 5</h1>
-                                <p>Profile card with Sliding Sidebar Menu made using HTML, CSS & Javascript</p>
-                            </div>
-
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardLeft">
-                            <div class="cardmatter">
-                                <h2>Project 6</h1>
-                                <p>Cam World - A Basic Camera Website made using HTML & CSS</p>
-
+                        <div class="swiper-slide">
+                            <div class="card cardLeft">
+                                <div class="cardmatter">
+                                    <h2>Project - 6</h1>
+                                    <p>Cam World - A Basic Camera Website made using HTML & CSS</p>
+                                </div>
+                                <div class="cardimage">
+                                    <img src="proj6.PNG" loading="lazy" alt="proj6" onclick="OpenImgModal(this.src)" >
+                                </div>
                             </div>
-                            <div class="cardimage">
-                                <img src="proj6.PNG" loading="lazy" alt="proj6">
-                            </div>
-
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardRight">
-                            <div class="cardimage">
-                                <img src="proj7.PNG" loading="lazy" alt="proj7">
+                        <div class="swiper-slide">
+                            <div class="card cardRight">
+                                <div class="cardimage">
+                                    <img src="proj7.PNG" loading="lazy" alt="proj7" onclick="OpenImgModal(this.src)" >
+                                </div>
+                                <div class="cardmatter">
+                                    <h2>Project - 7</h1>
+                                    <p>WebWeavers - A basic Landing page template made using HTML & CSS </p>
+                                </div>
                             </div>
-                            <div class="cardmatter">
-                                <h2>Project 7</h1>
-                                <p>WebWeavers - A basic Landing page template made using HTML & CSS </p>
-                            </div>
-
                         </div>
 
-                      </div>
-
-                      <div class="swiper-slide">
-
-                        <div class="card cardLeft">
-                            <div class="cardmatter">
-                                <h2>Project 8</h1>
-                                <p>HomeDecor - Simple Landing Page of Interior Designing Company made using HTML & CSS </p>
+                        <div class="swiper-slide">
+                            <div class="card cardLeft">
+                                <div class="cardmatter">
+                                    <h2>Project - 8</h1>
+                                    <p>HomeDecor - Simple Landing Page of Interior Designing Company made using HTML & CSS </p>
+                                </div>
+                                <div class="cardimage">
+                                    <img src="proj8.PNG" loading="lazy" alt="proj8" onclick="OpenImgModal(this.src)" >
+                                </div>
                             </div>
-                            <div class="cardimage">
-                                <img src="proj8.PNG" loading="lazy" alt="proj8">
-                            </div>
-
                         </div>
-
-                      </div>
-
-
 
 
                     </div>
-                    <!-- If we need pagination -->
+                    <!-- pagination -->
                     <div class="swiper-pagination"></div>
                 
-                    <!-- If we need navigation buttons -->
+                    <!-- navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 
@@ -203,83 +175,88 @@
             </div>
 
 
+            <div id="ImgModal" class="ImgModal">
+
+                <!-- The Close Button -->
+                <span class="close" onclick="CloseImgModal()">&times;</span>
+        
+                <!-- Modal Content (The Image) -->
+                <img class="ImgModal-content" id="Image">
+
+            </div>
+
+
 
 
             <div class="projectCards">
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj1.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj1.png" class="card-img-top" alt="proj1" onclick="OpenImgModal(this.src)" >
                     <div class="card-body">
-                      <h5 class="card-title">Project 1</h5>
-                      <p class="card-text"><p><span><a href="https://textcookie.netlify.app" target="_blank">TextCookie</a></span> - A Text utility WebApp made using Javascript Framework ReactJs. </p></p>
+                        <h5 class="card-title">Project - 1</h5>
+                        <p class="card-text"><p><span><a href="https://textcookie.netlify.app" target="_blank">TextCookie</a></span> - A Text utility WebApp made using Javascript Framework ReactJs. </p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj2.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj2.png" class="card-img-top" alt="proj2">
                     <div class="card-body">
-                      <h5 class="card-title">Project 2</h5>
-                      <p class="card-text"><p>NewsBox - A news WebApp using NewsApi made with Javascript Framework ReactJs </p></p>
+                        <h5 class="card-title">Project - 2</h5>
+                        <p class="card-text"><p>NewsBox - A news WebApp using NewsApi made with Javascript Framework ReactJs </p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj3.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj3.png" class="card-img-top" alt="proj3">
                     <div class="card-body">
-                      <h5 class="card-title">Project 3</h5>
-                      <p class="card-text"><p>Burgs - A Basic Landing page for Burger Restraunt made using HTML & CSS  </p></p>
+                        <h5 class="card-title">Project - 3</h5>
+                        <p class="card-text"><p>Burgs - A Basic Landing page for Burger Restraunt made using HTML & CSS  </p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj4.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj4.png" class="card-img-top" alt="proj4">
                     <div class="card-body">
-                      <h5 class="card-title">Project 4</h5>
-                      <p class="card-text"><p>Basic Portfolio website template using HTML & CSS</p></p>
+                        <h5 class="card-title">Project - 4</h5>
+                        <p class="card-text"><p>Basic Portfolio website template using HTML & CSS</p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj5.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj5.png" class="card-img-top" alt="proj5">
                     <div class="card-body">
-                      <h5 class="card-title">Project 5</h5>
-                      <p class="card-text"><p>Profile card with Sliding Sidebar Menu made using HTML, CSS & Javascript</p></p>
+                        <h5 class="card-title">Project - 5</h5>
+                        <p class="card-text"><p>Profile card with Sliding Sidebar Menu made using HTML, CSS & Javascript</p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj6.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj6.png" class="card-img-top" alt="proj6">
                     <div class="card-body">
-                      <h5 class="card-title">Project 6</h5>
-                      <p class="card-text"><p>Cam World - A Basic Camera Website made using HTML & CSS</p></p>
+                        <h5 class="card-title">Project - 6</h5>
+                        <p class="card-text"><p>Cam World - A Basic Camera Website made using HTML & CSS</p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj7.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj7.png" class="card-img-top" alt="proj7">
                     <div class="card-body">
-                      <h5 class="card-title">Project 6</h5>
-                      <p class="card-text"><p>WebWeavers - A basic Landing page template made using HTML & CSS </p></p>
+                        <h5 class="card-title">Project - 7</h5>
+                        <p class="card-text"><p>WebWeavers - A basic Landing page template made using HTML & CSS </p></p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="proj8.png" class="card-img-top" alt="...">
+                <div class="card" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" style="width: 18rem;">
+                    <img src="proj8.png" class="card-img-top" alt="proj8">
                     <div class="card-body">
-                      <h5 class="card-title">Project 6</h5>
-                      <p class="card-text"><p>HomeDecor - Simple Landing Page of Interior Designing Company made using HTML & CSS </p></p>
+                        <h5 class="card-title">Project - 8</h5>
+                        <p class="card-text"><p>HomeDecor - Simple Landing Page of Interior Designing Company made using HTML & CSS </p></p>
                     </div>
                 </div>
 
             </div>
-        
-
-
+    
         </div>
-
-
-
-
 
         <div class="footer-basic">
             <footer>
@@ -297,7 +274,7 @@
                     <li class="list-inline-item"><a href="Projects.html">Projects</a></li>
                     <li class="list-inline-item"><a href="Contact.html">Contact</a></li>
                 </ul>
-                <p class="copyright" translate="no">Syed Muhammad Maaz ul Hasan © 2022</p>
+                <p class="copyright" translate="no">Syed Muhammad Maaz ul Hasan © <span id="Year"></span></p>
             </footer>
         </div>
 
@@ -308,67 +285,115 @@
     </div>
 
 
+<script>
+    const preLoaderScreen=document.getElementById("preLoaderScreen")
 
-    <script src="https://kit.fontawesome.com/d316829f80.js" crossorigin="anonymous"></script>
+    window.addEventListener('load',() => {
+        preLoaderScreen.style.display="none"
+    });
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script>
+</script>
+
+<script src="https://kit.fontawesome.com/d316829f80.js" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
 
         // Swiper JS Framework 
-
-        const swiper = new Swiper('.swiper', {
-        
-        direction: 'horizontal',
-        autoplay:{
-            delay:3000,
-            disableOnInteraction:false,
-        },
-        loop: true,
-        
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: 'true'
-        },
+    const swiper = new Swiper('.swiper', {
     
-        
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    direction: 'horizontal',
+    autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+    },
+    loop: true,
     
-        });
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: 'true'
+    },
 
-    </script>
+    
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    });
+
+</script>
 
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script>
+    AOS.init();
+</script>
 
-    <script>
+<script>
 
     const totopbtn=document.getElementById("totopbtn") 
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() { 
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         totopbtn.style.display = "block";
-      } else {
+        } else {
         totopbtn.style.display = "none";
-      }
+        }
     }
 
-
-        scrollToTop = () =>{
-            window.scrollTo({ top:0, behavior:"smooth" });
-        }
+    scrollToTop = () =>{
+        window.scrollTo({ top:0, behavior:"smooth" });
+    }
         
-    </script>
+</script>
 
-<!-- <script src=”https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js” integrity=”sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo” crossorigin=”anonymous”></script>
-<script src=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js” integrity=”sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/” crossorigin=”anonymous”></script> -->
+<script>
+    const menuBars=document.getElementById("menuBars")
+    const navli=document.getElementById("navli")
+    
+    const displayNav=()=>{
+        
+        if ( navli.style.display==="none") {
+            navli.style.display="block"
+        } else {
+            navli.style.display="none"
+        }
+    }
+
+    menuBars.addEventListener("click", displayNav);
+
+</script>
+
+<script>
+    // Year in footer will automatically change
+    const Year=document.getElementById("Year")
+    Year.innerHTML= new Date().getFullYear()
+
+</script>
+
+<script>
+
+const OpenImgModal=(src)=>{
+    const ImgModal = document.getElementById('ImgModal');
+    const modalImg = document.getElementById("Image");
+
+    ImgModal.style.display = "block";
+    modalImg.src = src;
+
+
+}
+
+const CloseImgModal=()=>{
+    const span = document.getElementsByClassName("close")[0];
+    const ImgModal = document.getElementById('ImgModal');
+    ImgModal.style.display = "none";
+}
+
+</script>
 
 </body>
 </html>

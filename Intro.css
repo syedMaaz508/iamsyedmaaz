@@ -16,33 +16,28 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  --mainColor: #57c4b2;
-  --secondaryColor: #1e1e1e;
+  --mainColor:#7f5af0;
+  --secondaryColor:#242629;
+  --thirdColor:#16161a;
 }
 
 .intro {
-
   position: fixed;
   top: 0;
   left: 0;
-
   z-index: 200;
-  
   opacity: 1;
-
   width: 100%;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
   flex-direction: column;
+  background-color: var(--secondaryColor);
 
   transition: all .8s ease;
-  
-  background-color: var(--secondaryColor);
 }
 
 .intro.fading {
@@ -52,17 +47,17 @@ body::-webkit-scrollbar {
 
 .intro h1 {
   font-family: "Amsterdam";
-  font-size: 2vw;
+  font-size: 2.5rem;
   letter-spacing: 0.5rem;
-
   color: var(--mainColor);
-
   text-align: center;
+
   -webkit-animation: tracking-in-contract-bck 3s
     cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-contract-bck 4s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
 }
+
 @-webkit-keyframes tracking-in-contract-bck {
   0% {
     letter-spacing: 1em;
@@ -79,6 +74,7 @@ body::-webkit-scrollbar {
     opacity: 1;
   }
 }
+
 @keyframes tracking-in-contract-bck {
   0% {
     letter-spacing: 1em;
@@ -97,18 +93,16 @@ body::-webkit-scrollbar {
 }
 
 .intro img {
-    max-width: 15vw;
-    height: 15vw;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     border: 2px solid var(--mainColor);
+    cursor: pointer;
+    transition: transform .5s;
 
-    -webkit-animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	        animation: slide-in-blurred-top 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-
+    -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+    animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
 }
-
-
-
 
 @-webkit-keyframes slide-in-blurred-top {
     0% {
@@ -130,6 +124,7 @@ body::-webkit-scrollbar {
       opacity: 1;
     }
   }
+
   @keyframes slide-in-blurred-top {
     0% {
       -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
@@ -150,4 +145,17 @@ body::-webkit-scrollbar {
       opacity: 1;
     }
   }
-  
+
+  /* --------------------------------------------- MEDIA QUERIES --------------------------------------------- */
+
+  /* for Mobile */
+@media screen and (min-width:320px) and (max-width:568px){
+  .intro h1{
+    font-size: .7rem;
+  }
+
+  .intro img{
+    width: 5rem;
+    height: 5rem;
+  }
+}
