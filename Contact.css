@@ -32,7 +32,6 @@ body {
 }
 
 
-
 /* to hide scroll bars of browsers */
 body::-webkit-scrollbar {  
     display: none;
@@ -44,9 +43,14 @@ html{
   scroll-behavior: smooth;
 }
 
+/* ------------------------------------------------------------------------ */
+
 #modal {
   background-color: var(--mainColor);
   margin: auto;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
 
   animation-name: zoom;
   animation-duration: 0.6s;
@@ -54,10 +58,6 @@ html{
   background: rgba(127, 90, 240, 0.185);
   backdrop-filter: blur( 3px );
   -webkit-backdrop-filter: blur( 3px );
-
-  border: none;
-  border-radius: 1rem;
-  padding: 2rem 3rem;
 
 }
 
@@ -92,7 +92,6 @@ html{
   background: none;
   border: none;
   color: white;
-
   position: absolute;
   top: 2px;
   right: 1rem;
@@ -106,42 +105,8 @@ html{
 }
 
 
-/* .modal-content {
-
-  color: white;
-  background-color: #7f5af0;
-  border-radius: 1rem;
-  background: rgba( 127, 90, 240, 0.25 );
-  backdrop-filter: blur( 3px );
-  -webkit-backdrop-filter: blur( 3px );
-
-  animation-name: zoom;
-  animation-duration: 0.6s;
-  
- 
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-
-.close{
-  font-size: 40px;
-  opacity:0.8;
-  cursor: pointer;
-
-  transition:all 0.3s;
-
-}
-.close:hover,
-.close:focus {
-  opacity:1;
-
-} */
-
 /* ------------------------------------------------------------------------ */
+
 
 #preLoaderScreen{
   background-color: var(--secondaryColor);
@@ -294,15 +259,14 @@ html{
   margin: .5rem 0rem;
   display: none;
   transition: all .3s;
-  opacity: .5;
+  opacity: .8;
 }
   
 .nav-items #menuBars i{
   font-size: 1.5rem;
 }
   
-.nav-items #menuBars:active {
-  transform: scale(0.9);
+.nav-items #menuBars:hover, .nav-items #menuBars:hover {
   opacity: 1;
 }
   

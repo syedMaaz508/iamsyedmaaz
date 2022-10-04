@@ -233,15 +233,14 @@ html {
   margin: 0.5rem 0rem;
   display: none;
   transition: all 0.3s;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .nav-items #menuBars i {
   font-size: 1.5rem;
 }
 
-.nav-items #menuBars:active {
-  transform: scale(0.9);
+.nav-items #menuBars:hover, .nav-items #menuBars:hover {
   opacity: 1;
 }
 
