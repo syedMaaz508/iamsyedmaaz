@@ -27,7 +27,7 @@
   
     </div>
  
-    <div class="modal fade " id="SendModal" tabindex="-1" aria-labelledby="SendModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade " id="SendModal" tabindex="-1" aria-labelledby="SendModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content ">
                 <div class="modal-header">
@@ -40,6 +40,13 @@
         
             </div>
         </div>
+    </div> -->
+
+    <div id="modalContainer">
+        <dialog id="modal">
+            <button id="hide">&times;</button>
+            <p>Thanks for your Feedback!</p>
+        </dialog>
     </div>
 
 
@@ -108,21 +115,17 @@
                 </div>
 
                             <!-- action and method attribute from formsubmit.com -->
-                <form action="https://formsubmit.co/syedmaaz508@gmail.com" method="POST" class="formrightside" data-aos="fade-right" >
+                <form onsubmit="SubmitForm(); reset(); return false" method="post" class="formrightside" data-aos="fade-right" >
 
-                    <input class="nameinput" name= "name" type="text" placeholder="Your Name" pattern="[a-zA-Z]+" autocomplete="off">
+                    <input class="nameinput" id="nameinput" name= "name" type="text" placeholder="Your Name" pattern="[a-z A-Z]+" autocomplete="off" required>
                     
-                    <input class="emailinput" name= "email" type="email" placeholder="Your Email Address" autocomplete="off">
+                    <input class="emailinput" id="emailinput" name= "email" type="email" placeholder="Your Email Address" autocomplete="off">
 
-                    <textarea name="message" name= "message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <textarea name="message" id="message" name= "message" id="message" type="text" cols="30" rows="10" placeholder="Your Message" required></textarea>
 
+                    <!-- <button class="submit" id="submit" type="submit"  data-bs-toggle="modal" data-bs-target="#SendModal" > Send <span> <i class="fa-solid fa-paper-plane"></i> </span>  </button>     -->
 
-                    <button class="submit" id="submit" type="button"  data-bs-toggle="modal" data-bs-target="#SendModal" > Send <span> <i class="fa-solid fa-paper-plane"></i> </span>  </button>
-                    <!-- some modifications copied from formsubmit.co -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Contact.html">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_template" value="table">
+                    <button class="submit" id="submit" type="submit" > Send <span> <i class="fa-solid fa-paper-plane"></i> </span>  </button>                
 
                 </form>
 
@@ -159,6 +162,40 @@
     
 
 </div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+    SubmitForm=()=>{
+        let nameinput=document.getElementById("nameinput").value;
+        let emailinput=document.getElementById("emailinput").value;
+        let message=document.getElementById("message").value;
+                    
+        Email.send({
+            // Host : "smtp.elasticemail.com",
+            // Username : "syedmaaz508@gmail.com",
+            // Password : "5FDDBD6F1A6720C75C1D17947CEC0246E870",
+            SecureToken:"df6e02ce-0d8b-40af-8faa-5458da47bb6f",
+            To : 'syedmaaz508@gmail.com',
+            From : 'syedmaaz508@gmail.com',
+            Subject : "From your Portfolio Website",
+            Body : "Name: "+ nameinput + "<br/> Email: " + emailinput + "<br/> Message: " + message
+        }).then(
+            (message)=>{
+                document.querySelector("#modal").showModal()
+            })
+        .catch(
+            message=>alert("Sorry, Message is not sent due to server issue!")
+        );
+
+    }
+
+</script>
+<script>
+    hide.addEventListener('click',() => {
+        document.querySelector("#modal").close()
+    });
+</script>
 
 
 <script>
