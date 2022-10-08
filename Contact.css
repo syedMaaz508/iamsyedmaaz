@@ -157,7 +157,7 @@ html{
 /* ------------------------------------------------------------------------ */
   
 .contact-container {
-  max-width: 100%;
+  width: 100%;
   height: 100vh;
 }
   
@@ -315,8 +315,7 @@ html{
 
 
 .contact-content{
-  max-width: 100%;
-  height: 100vh;
+  width: 100%;
   margin: 4rem 0;
 }
 
