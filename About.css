@@ -314,6 +314,21 @@ body::-webkit-scrollbar {
   -webkit-animation: slide-in-blurred-right 1.5s cubic-bezier(0.23, 1, 0.32, 1)
     both;
   animation: slide-in-blurred-right 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+  
+   animation: floatImage 4s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-24px);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes slide-in-blurred-right {
